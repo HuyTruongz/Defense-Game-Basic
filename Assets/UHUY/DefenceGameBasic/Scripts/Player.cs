@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace UHUY.DefenseBasic
 {
-    public class Player : MonoBehaviour
+    public class Player : MonoBehaviour, IComponentChecking
     {
         public float atkRate;
         private Animator m_anim;
@@ -23,13 +23,20 @@ namespace UHUY.DefenseBasic
 
         }
 
+        public bool IsComponentNull()
+        {
+            return m_anim == null;
+        }
+
         // Update is called once per frame
         void Update()
         {
+            if (IsComponentNull()) return;
+                                  
             if (Input.GetMouseButtonDown(0) && !m_isAttacked)
             {
-                if (m_anim)
-                    m_anim.SetBool(Const.ATTACK_ANIM, true);
+
+                m_anim.SetBool(Const.ATTACK_ANIM, true);
                 m_isAttacked = true;
             }
             if (m_isAttacked)
@@ -46,8 +53,8 @@ namespace UHUY.DefenseBasic
 
         public void ResetAtkAmin()
         {
-            if (m_anim)
-                m_anim.SetBool(Const.ATTACK_ANIM, false);
+            if (IsComponentNull()) return;
+            m_anim.SetBool(Const.ATTACK_ANIM, false);
         }
     }
 }
