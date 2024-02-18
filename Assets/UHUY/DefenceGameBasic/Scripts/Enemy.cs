@@ -36,7 +36,9 @@ namespace UHUY.DefenseBasic
         {
             if (IsComponentNull()) return;
 
-            if (Vector2.Distance(m_player.transform.position, transform.position) <= atkDistance)
+            float distToPlayer = Vector2.Distance(m_player.transform.position, transform.position);
+
+            if (distToPlayer <= atkDistance)
             {
                 if (m_anim)
                 {
@@ -48,6 +50,13 @@ namespace UHUY.DefenseBasic
             {
                 m_rb.velocity = new Vector2(-speed, m_rb.velocity.y);
             }
+        }
+        public void Die()
+        {
+            if (IsComponentNull()) return;
+            m_anim.SetTrigger(Const.DEAD_ANIM);
+            m_rb.velocity = Vector2.zero;
+            gameObject.layer = LayerMask.NameToLayer(Const.DEAD_ANIM);
         }
     }
 }
