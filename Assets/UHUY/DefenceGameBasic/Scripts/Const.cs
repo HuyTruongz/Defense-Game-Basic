@@ -12,7 +12,7 @@ namespace UHUY.DefenseBasic
         public const string ENEMY_WEAPON_TAG = "EnemyWeapon";
 
         public const string ATTACK_ANIM = "Attacking";
-        public const string Dead_ANIM = "Dead";
+        public const string DEAD_ANIM = "Dead";
 
         public const string DEAD_LAYER = "Dead";
 

@@ -10,6 +10,7 @@ namespace UHUY.DefenseBasic
         private Animator m_anim;
         private float m_curAtkRate;
         private bool m_isAttacked;
+        private bool m_isDead;
 
         private void Awake()
         {
@@ -55,6 +56,16 @@ namespace UHUY.DefenseBasic
         {
             if (IsComponentNull()) return;
             m_anim.SetBool(Const.ATTACK_ANIM, false);
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (IsComponentNull()) return;
+            if (collision.CompareTag(Const.ENEMY_WEAPON_TAG) && !m_isDead)
+            {
+                m_anim.SetTrigger(Const.DEAD_ANIM);
+                m_isDead = true;
+            }
         }
     }
 }
