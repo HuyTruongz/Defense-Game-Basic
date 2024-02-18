@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 5277290345846162761}
   m_Layer: 6
   m_Name: Hero_01
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,8 +183,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2140512597
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 04bf1c093121a244e8526f8505108207, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -302,4 +302,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ab491661810c194197e2b9781295ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRate: 1
+  atkRate: 1.5
