@@ -32,6 +32,12 @@ namespace UHUY.DefenseBasic
             get => PlayerPrefs.GetInt(Const.COIN_PREF, 0);
         }
 
+        public static float musicVol
+        {
+            set => PlayerPrefs.SetFloat(Const.MUSIC_VOL_PREF, value);
+            get => PlayerPrefs.GetFloat(Const.MUSIC_VOL_PREF, 0);
+        }
+
         public static float soundVol
         {
             set => PlayerPrefs.SetFloat(Const.SOUND_VOL_PREF, value);
