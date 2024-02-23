@@ -68,8 +68,7 @@ namespace UHUY.DefenseBasic
             gameObject.layer = LayerMask.NameToLayer(Const.DEAD_ANIM);
             
             m_gm.Score++;
-            int coinBonus = Random.Range(minCoinBonus, maxCoinBonus);
-            Debug.Log(coinBonus);
+            int coinBonus = Random.Range(minCoinBonus, maxCoinBonus);           
             Pref.coins += coinBonus;
 
 
