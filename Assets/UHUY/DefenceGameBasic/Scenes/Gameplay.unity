@@ -1616,7 +1616,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 342355689}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1897975084}
+        m_TargetAssemblyTypeName: UHUY.DefenseBasic.GameManager, Assembly-CSharp
+        m_MethodName: PlayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &342355689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6078,8 +6090,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9d800394c541f45a0c4f1467770a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titleTxt: {fileID: 0}
-  contentTxt: {fileID: 0}
   homeGUI: {fileID: 67695234}
   gameGUI: {fileID: 452542579}
   gameoverDialog: {fileID: 0}
@@ -6117,7 +6127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1841813975
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6210,6 +6220,7 @@ MonoBehaviour:
   - {fileID: 8724359357961944330, guid: f09757fc696e56f4bb46ba516367bdf1, type: 3}
   - {fileID: 6479696843840384643, guid: ba1511bc26365d143b587ab6ffdcb87c, type: 3}
   - {fileID: 7593895827575343791, guid: 0a2c74a60f02a1c43ab4f5967bf8c01a, type: 3}
+  guiMng: {fileID: 1802617623}
 --- !u!4 &1897975085
 Transform:
   m_ObjectHideFlags: 0

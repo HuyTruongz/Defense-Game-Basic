@@ -4,19 +4,38 @@ using UnityEngine;
 
 namespace UHUY.DefenseBasic
 {
-    public class GameManager : MonoBehaviour
+    public class GameManager : MonoBehaviour, IComponentChecking
     {
         public float spawnTime;
         public Enemy[] enemiePrefabs;
         private bool m_isGameover;
         private int m_score;
+        public GUIManager guiMng;
 
         public int Score { get => m_score; set => m_score = value; }
 
         // Start is called before the first frame update
         void Start()
         {
+            
+            if (IsComponentNull()) return;
+
+            guiMng.ShowGameGUI(false);
+            guiMng.UpdateMianCoins();
+
+        }
+
+        public void PlayGame()
+        {
+
+            guiMng.ShowGameGUI(true);
             StartCoroutine(SpawnEnemy());
+            guiMng.UpdateGameplayCoins();
+        }
+
+        public bool IsComponentNull()
+        {
+            return guiMng == null;
         }
 
         // Update is called once per frame
