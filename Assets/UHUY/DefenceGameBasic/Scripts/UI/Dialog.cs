@@ -3,35 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Dialog : MonoBehaviour
+
+namespace UHUY.DefenseBasic
 {
-    public Text titleTxt;
-    public Text contentTxt;
-
-    public virtual void Show(bool isShow)
+    public class Dialog : MonoBehaviour
     {
-        gameObject.SetActive(isShow);
-    }
+        public Text titleTxt;
+        public Text contentTxt;
 
-    public virtual void UpdataDialog(string title, string content)
-    {
-        if (titleTxt)
+        public virtual void Show(bool isShow)
         {
-            titleTxt.text = title;
+            gameObject.SetActive(isShow);
         }
-        if (contentTxt)
+
+        public virtual void UpdataDialog(string title, string content)
         {
-            contentTxt.text = content;
+            if (titleTxt)
+            {
+                titleTxt.text = title;
+            }
+            if (contentTxt)
+            {
+                contentTxt.text = content;
+            }
         }
-    }
 
-    public virtual void UpdateDialog()
-    {
+        public virtual void UpdateDialog()
+        {
 
-    } 
+        }
 
-    public virtual void Close()
-    {
-        gameObject.SetActive(false);
+        public virtual void Close()
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
+
