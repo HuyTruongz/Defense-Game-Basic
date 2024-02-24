@@ -38,11 +38,17 @@ namespace UHUY.DefenseBasic
             return guiMng == null;
         }
 
-        // Update is called once per frame
-        void Update()
+        public void Gameover()
         {
+            if (m_isGameover) return;
 
+            m_isGameover = true;
+
+            Pref.bestscore = m_score;
+            if(guiMng.gameoverDialog)
+            guiMng.gameoverDialog.Show(true);
         }
+       
 
         IEnumerator SpawnEnemy()
         {

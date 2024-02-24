@@ -3496,7 +3496,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 924432512}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1419408186}
+        m_TargetAssemblyTypeName: UHUY.DefenseBasic.GameoverDialog, Assembly-CSharp
+        m_MethodName: Replay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &924432512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3692,7 +3704,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 955896422}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1419408186}
+        m_TargetAssemblyTypeName: UHUY.DefenseBasic.GameoverDialog, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &955896422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5243,6 +5267,7 @@ GameObject:
   - component: {fileID: 1419408183}
   - component: {fileID: 1419408185}
   - component: {fileID: 1419408184}
+  - component: {fileID: 1419408186}
   m_Layer: 5
   m_Name: GameOverDialog
   m_TagString: Untagged
@@ -5308,6 +5333,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419408182}
   m_CullTransparentMesh: 1
+--- !u!114 &1419408186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419408182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 458928d9ea069ce4f85f787462d9622f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleTxt: {fileID: 0}
+  contentTxt: {fileID: 0}
+  bestScoreTxt: {fileID: 577383266}
 --- !u!1 &1425445207
 GameObject:
   m_ObjectHideFlags: 0
@@ -6092,7 +6132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   homeGUI: {fileID: 67695234}
   gameGUI: {fileID: 452542579}
-  gameoverDialog: {fileID: 0}
+  gameoverDialog: {fileID: 1419408186}
   mainCoinTxt: {fileID: 578141239}
   gameplayCoinTxt: {fileID: 868433015}
 --- !u!4 &1802617624
