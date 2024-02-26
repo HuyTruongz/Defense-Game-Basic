@@ -14,6 +14,7 @@ namespace UHUY.DefenseBasic
 
         public override void Show(bool isShow)
         {
+            Pref.coins = 10000;
             base.Show(isShow);
             m_shopMng = FindObjectOfType<ShopManager>();
             m_gm = FindObjectOfType<GameManager>();
@@ -51,8 +52,48 @@ namespace UHUY.DefenseBasic
                 itemUIClone.transform.localPosition = Vector3.zero;
 
                 itemUIClone.UpdateUI(item, idx);
+
+                if (itemUIClone.btn)
+                {
+                    itemUIClone.btn.onClick.RemoveAllListeners();
+                    itemUIClone.btn.onClick.AddListener(() => ItemEvent(item,idx));
+                }
             }
         }
+
+        private void ItemEvent(ShopItem item,int itemIdx)
+        {
+            if(item == null) return;
+
+            bool isUnlocked = Pref.GetBool(Const.PLAYER_PREFIX_PREF + itemIdx);
+
+            if (isUnlocked)
+            {
+                if (itemIdx == Pref.curPlayerId) return;
+
+                Pref.curPlayerId = itemIdx;               
+
+                UpdateUI();
+            }
+            else if (Pref.coins >= item.price)
+            {
+                Pref.coins -= item.price;
+                Pref.SetBool(Const.PLAYER_PREFIX_PREF + itemIdx, true);
+                Pref.curPlayerId = itemIdx;
+             
+                UpdateUI();
+
+                if (m_gm.guiMng)
+                {
+                    m_gm.guiMng.UpdateMianCoins();
+                }
+            }
+            else
+            {
+                Debug.Log("not money");
+            }
+        }
+
 
         public void ClearChilds()
         {
