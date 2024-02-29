@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 12846591}
   - component: {fileID: 12846590}
   - component: {fileID: 12846589}
+  - component: {fileID: 12846592}
   m_Layer: 5
   m_Name: TileText
   m_TagString: Untagged
@@ -254,6 +255,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12846587}
   m_CullTransparentMesh: 1
+--- !u!95 &12846592
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12846587}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 85aae15963ff1934a990eba77fa61aca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &36831535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,6 +1166,7 @@ GameObject:
   - component: {fileID: 342355690}
   - component: {fileID: 342355689}
   - component: {fileID: 342355688}
+  - component: {fileID: 342355691}
   m_Layer: 5
   m_Name: PlayBtn
   m_TagString: Untagged
@@ -1265,6 +1288,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342355686}
   m_CullTransparentMesh: 1
+--- !u!95 &342355691
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342355686}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f435174f4279396479c9fa44d5873f2e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &351736470
 GameObject:
   m_ObjectHideFlags: 0
