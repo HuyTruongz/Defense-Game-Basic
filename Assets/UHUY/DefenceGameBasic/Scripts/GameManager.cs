@@ -13,6 +13,7 @@ namespace UHUY.DefenseBasic
         public GUIManager guiMng;
         private Player m_curPlayer;
         public ShopManager shopMng;
+        public AudioController auCtr;
 
         public int Score { get => m_score; set => m_score = value; }
 
@@ -29,17 +30,19 @@ namespace UHUY.DefenseBasic
 
         public bool IsComponentNull()
         {
-            return guiMng == null || shopMng == null;
+            return guiMng == null || shopMng == null || auCtr == null;
         }
 
         public void PlayGame()
         {
+            if (IsComponentNull()) return;
+
             ActivePlayer();
 
             guiMng.ShowGameGUI(true);
             StartCoroutine(SpawnEnemy());
             guiMng.UpdateGameplayCoins();
-
+            auCtr.PlayBgm();
 
         }
 
@@ -73,6 +76,8 @@ namespace UHUY.DefenseBasic
             Pref.bestscore = m_score;
             if(guiMng.gameoverDialog)
             guiMng.gameoverDialog.Show(true);
+
+            auCtr.Playsound(auCtr.gameover);
         }
        
 

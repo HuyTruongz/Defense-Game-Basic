@@ -73,6 +73,8 @@ namespace UHUY.DefenseBasic
             if(m_gm.guiMng)
                 m_gm.guiMng.UpdateGameplayCoins();
 
+            if (m_gm.auCtr)
+                m_gm.auCtr.Playsound(m_gm.auCtr.enemyDead);
 
             Destroy(gameObject, 2f);
         }
